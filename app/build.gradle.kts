@@ -1,6 +1,7 @@
 plugins {
     id(libs.plugins.android.application.get().pluginId)
     id(libs.plugins.kotlin.android.get().pluginId)
+    id(libs.plugins.kotlin.compose.get().pluginId)
     id(libs.plugins.hilt.get().pluginId)
     kotlin("kapt")
 }
@@ -29,16 +30,28 @@ android {
             )
         }
     }
+
+    buildFeatures.compose = true
+
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_11
         targetCompatibility = JavaVersion.VERSION_11
     }
+
     kotlinOptions {
         jvmTarget = "11"
+    }
+
+    kotlin {
+        sourceSets.all {
+            languageSettings.enableLanguageFeature("ExplicitBackingFields")
+        }
     }
 }
 
 dependencies {
+    implementation(projects.uiCommon)
+
     implementation(libs.androidx.multidex)
 
     // Hilt
