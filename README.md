@@ -15,6 +15,7 @@ A scalable Android starter project using **Kotlin**, **Jetpack Compose**, and **
 ---
 
 ## Project Structure
+```
 root/
 ├── app/ # Application entry point
 ├── common/ # Shared code (design system, utils, etc.)
@@ -27,7 +28,7 @@ root/
 ├── gradle/ # Version catalog 
 ├── settings.gradle.kts 
 └── build.gradle.kts
-
+```
 
 ---
 
@@ -45,26 +46,19 @@ Open the folder and sync the Gradle project.
 
 ## Refactor & Rename
 ### Step 1: Change Package Name
-Decide your new package (e.g., com.example.myapp)
-
-Replace all id.ak.multimoduletemplate with your new package
-
-Use Refactor > Rename in Android Studio for safety
+- Decide your new package (e.g., com.example.myapp)
+- Replace all id.ak.multimoduletemplate with your new package
+- Use Refactor > Rename in Android Studio for safety
 
 ### Step 2: Rename Modules (optional)
-To rename a module like feature-home:
-
-Right-click the module > Refactor > Rename
-
-Update settings.gradle.kts:
-
+- To rename a module like feature-home: Right-click the module > Refactor > Rename
+- Update settings.gradle.kts:
 ```kotlin
 include(":feature-dashboard")
 ```
 
 ### Step 3: Update App Namespace
-In app/build.gradle.kts:
-
+- In app/build.gradle.kts:
 ```kotlin
 namespace = "com.example.myapp"
 ```
