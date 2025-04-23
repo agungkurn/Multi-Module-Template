@@ -67,7 +67,6 @@ fastlane/test_output
 *.db-journal.*
 *.db.*
 *.lock
-*.xml
 *.tmp
 *.dex
 

@@ -10,7 +10,7 @@ A scalable Android starter project using **Kotlin**, **Jetpack Compose**, and **
 - Jetpack Compose for UI
 - Gradle Kotlin DSL with version catalog (`libs.versions.toml`)
 - Shared plugin logic via `build-logic`
-- Kotlin 2.1.x + AGP 8.2.x+
+- Kotlin 2.1.x + AGP 8.9.x+
 
 ---
 
@@ -50,11 +50,11 @@ Open the folder and sync the Gradle project.
 - Replace all id.ak.multimoduletemplate with your new package
 - Use Refactor > Rename in Android Studio for safety
 
-### Step 2: Rename Modules (optional)
+### Step 2: Rename and Add Modules
 - To rename a module like feature-home: Right-click the module > Refactor > Rename
 - Update settings.gradle.kts:
 ```kotlin
-include(":feature-dashboard")
+include(":features:home")
 ```
 
 ### Step 3: Update App Namespace
@@ -62,6 +62,22 @@ include(":feature-dashboard")
 ```kotlin
 namespace = "com.example.myapp"
 ```
+
+### Step 4: Update App name
+- In app/res/values/strings.xml:
+```xml
+<string name="app_name">New App Name</string>
+```
+- In settings.gradle.properties:
+```kotlin
+rootProject.name = "New Project Name"
+```
+
+### Step 5: Delete or Rewrite Template Code
+
+### Step 6: Rename Root (Project) Directory
+
+### Step 7: Re-init Git (optional)
 
 ## Gradle Setup
 - Shared plugins in build-logic
