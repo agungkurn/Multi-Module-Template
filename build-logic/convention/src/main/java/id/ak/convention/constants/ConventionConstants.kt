@@ -1,4 +1,4 @@
-package id.ak.convention.contants
+package id.ak.convention.constants
 
 internal object ConventionConstants {
     val commonCoreModule = ":common:core"

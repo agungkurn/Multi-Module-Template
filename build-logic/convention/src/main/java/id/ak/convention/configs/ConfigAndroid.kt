@@ -1,7 +1,7 @@
 package id.ak.convention.configs
 
 import com.android.build.api.dsl.LibraryExtension
-import id.ak.convention.contants.ConventionConstants
+import id.ak.convention.constants.ConventionConstants
 import org.gradle.api.JavaVersion
 import org.gradle.api.Project
 import org.gradle.kotlin.dsl.withType

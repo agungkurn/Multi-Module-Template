@@ -3,7 +3,7 @@ package id.ak.convention
 import com.android.build.gradle.LibraryExtension
 import id.ak.convention.configs.configAndroid
 import id.ak.convention.configs.configJetpackCompose
-import id.ak.convention.contants.ConventionConstants
+import id.ak.convention.constants.ConventionConstants
 import id.ak.convention.ext.alias
 import id.ak.convention.ext.androidTestImplementation
 import id.ak.convention.ext.implementation

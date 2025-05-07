@@ -1,6 +1,6 @@
 package id.ak.convention
 
-import id.ak.convention.contants.ConventionConstants
+import id.ak.convention.constants.ConventionConstants
 import id.ak.convention.ext.alias
 import id.ak.convention.ext.id
 import id.ak.convention.ext.implementation

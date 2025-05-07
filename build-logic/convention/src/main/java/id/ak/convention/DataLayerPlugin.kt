@@ -2,7 +2,7 @@ package id.ak.convention
 
 import com.android.build.gradle.LibraryExtension
 import id.ak.convention.configs.configAndroid
-import id.ak.convention.contants.ConventionConstants
+import id.ak.convention.constants.ConventionConstants
 import id.ak.convention.ext.alias
 import id.ak.convention.ext.debugImplementation
 import id.ak.convention.ext.implementation
@@ -13,8 +13,6 @@ import org.gradle.api.Plugin
 import org.gradle.api.Project
 import org.gradle.kotlin.dsl.configure
 import org.gradle.kotlin.dsl.dependencies
-import kotlin.jvm.kotlin
-import kotlin.text.get
 
 class DataLayerPlugin : Plugin<Project> {
     override fun apply(target: Project) {
