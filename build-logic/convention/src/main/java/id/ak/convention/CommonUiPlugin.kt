@@ -3,7 +3,6 @@ package id.ak.convention
 import com.android.build.gradle.LibraryExtension
 import id.ak.convention.configs.configAndroid
 import id.ak.convention.configs.configJetpackCompose
-import id.ak.convention.constants.ConventionConstants
 import id.ak.convention.ext.alias
 import id.ak.convention.ext.androidTestImplementation
 import id.ak.convention.ext.implementation
@@ -26,7 +25,7 @@ class CommonUiPlugin : Plugin<Project> {
             extensions.configure<LibraryExtension> {
                 configAndroid(this)
                 configJetpackCompose(this)
-                defaultConfig.targetSdk = ConventionConstants.MAX_SDK_VERSION
+                defaultConfig.targetSdk = libs.versions.targetSdk.get().toIntOrNull()
             }
 
             dependencies {

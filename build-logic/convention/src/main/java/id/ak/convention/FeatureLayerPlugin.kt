@@ -29,7 +29,7 @@ class FeatureLayerPlugin : Plugin<Project> {
             extensions.configure<LibraryExtension> {
                 configAndroid(this)
                 configJetpackCompose(this)
-                defaultConfig.targetSdk = ConventionConstants.MAX_SDK_VERSION
+                defaultConfig.targetSdk = libs.versions.targetSdk.get().toIntOrNull()
             }
 
             dependencies {

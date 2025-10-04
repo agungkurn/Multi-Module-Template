@@ -2,6 +2,7 @@ package id.ak.convention.configs
 
 import com.android.build.api.dsl.LibraryExtension
 import id.ak.convention.constants.ConventionConstants
+import id.ak.convention.ext.libs
 import org.gradle.api.JavaVersion
 import org.gradle.api.Project
 import org.gradle.kotlin.dsl.withType
@@ -11,10 +12,10 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 internal fun Project.configAndroid(libraryExtension: LibraryExtension) {
     libraryExtension.apply {
         namespace = "${ConventionConstants.BASE_NAME}.${project.path.replace(":", ".").substring(1)}"
-        compileSdk = ConventionConstants.MAX_SDK_VERSION
+        compileSdk = libs.versions.targetSdk.get().toIntOrNull()
 
         defaultConfig {
-            minSdk = ConventionConstants.MIN_SDK_VERSION
+            minSdk = libs.versions.minSdk.get().toIntOrNull()
 
             testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
             consumerProguardFiles("consumer-rules.pro")

@@ -27,7 +27,7 @@ class DataLayerPlugin : Plugin<Project> {
 
             extensions.configure<LibraryExtension> {
                 configAndroid(this)
-                defaultConfig.targetSdk = ConventionConstants.MAX_SDK_VERSION
+                defaultConfig.targetSdk = libs.versions.targetSdk.get().toIntOrNull()
             }
 
             dependencies {

@@ -9,8 +9,6 @@ internal object ConventionConstants {
         "/META-INF/gradle/incremental.annotation.processors"
     )
     const val BASE_NAME = "id.ak.convention"
-    const val MIN_SDK_VERSION = 28
-    const val MAX_SDK_VERSION = 35
     const val KSP = "ksp"
     const val FREE_COMPILER = "-opt-in=kotlin.RequiresOptIn"
 }
